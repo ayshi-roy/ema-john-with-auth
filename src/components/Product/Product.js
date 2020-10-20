@@ -6,14 +6,15 @@ import { Link } from 'react-router-dom';
 
 const Product = (props) => {
     // console.log(props);
-    const { img, name, seller, price, stock, key } = props.product;
+    const { img, name, seller, price, stock, key ,_id} = props.product;
+    // console.log(_id);
     return (
         <div className="product">
             <div>
                 <img src={img} alt="" />
             </div>
             <div>
-                <h4 className="product-name"><Link to={"/product/"+key}>{name}</Link></h4>
+                <h4 className="product-name"><Link to={"/product/"+_id}>{name}</Link></h4>
                 <br />
                 <p><small>by: {seller}</small></p>
                 <p>${price}</p>
